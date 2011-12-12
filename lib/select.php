@@ -49,8 +49,8 @@ class Select_InvalidParameters_Exception extends Select_Exception { }
  *
  *         My_DI::getClass('Mailer') returns 'My_Mailer'
  */
-class Select implements iSelect {
-    
+class Select implements iSelect
+{
     /**
      * @var string Default NS (copy and customise to extend the class)
      * @wtf http://j.mp/paamayim-nekudotayim
@@ -77,6 +77,9 @@ class Select implements iSelect {
      */
     static protected $_singletons = array();
     
+    /**
+     * @var array Map name:class Class lookup cache
+     */
     static protected $_cachedClassLookups = array();
     
     /**

@@ -19,7 +19,7 @@
 error_reporting(-1);
 $runs = 100000;
 
-require '../lib/select.php';
+require dirname(__FILE__) . '/../lib/select.php';
 
 class Timer {
     protected $last, $timers = array(), $length = 10;

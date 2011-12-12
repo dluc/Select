@@ -20,6 +20,9 @@ require FIXTURES . 'select_NewNS.php';
 
 class Select_Test extends PHPUnit_Framework_TestCase
 {
+    /**
+     * Reset container status before each test
+     */
     public function setUp()
     {
         App_Builder::reset();
@@ -27,8 +30,8 @@ class Select_Test extends PHPUnit_Framework_TestCase
     }
     
     /**
-     * We have three DI containers providing the same features, one with "old namespaces"
-     * and two with the actual namespace.  All are tested.
+     * We have two DI containers providing the same features, one with "old namespaces"
+     * and one with the actual namespace.  All are tested.
      * @wtf http://j.mp/paamayim-nekudotayim
      */
     public function classUnderTest()

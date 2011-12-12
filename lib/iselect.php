@@ -20,7 +20,6 @@
  */
 interface iSelect
 {
-    
     /**
      * Set a new class name space
      *

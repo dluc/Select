@@ -92,8 +92,8 @@ The previous code becomes:
         Select::defMailer('Mailer')
         $mailer = Select::getMailer()
 
-if you want to keep definition and use separated, perhaps storing all the
-definitions in a "configuration file", i.e. _definitions.php_, e.g.
+To keep definitions and uses separated, all the definitions can be stored in a
+"configuration file", i.e. _definitions.php_, e.g.
 
         Select::defMailer('Mailer')
         Select::defCache('MemCache')
@@ -132,8 +132,10 @@ instead.  See the API documentation for details and examples.
 By default all dependencies defined and/or created with
 `Select::<def|ini|set><*>` are considered singletons.  See the API
 documentation for multitons.  
-`Select::create` returns always a new object.
+`Select::create` always returns a new object.
 
+Constructors are limited to a maximum of 6 parameters, if you need more you
+shall override `Select::_create`, or perhaps reduce your code complexity ;-)
     
 
 # Notes
@@ -149,5 +151,5 @@ for the actual code:
         $class::someMethod()
 
 The cost of the abstraction should be in the order of few ms every 1000
-instantiations (tested on low spec hw).  Have a look at tests/speed.php to
-tests _Select_ on your system.  _Select_ requires PHP 5.3+.
+instantiations (tested on low spec hw).  Have a look at _tests/speed.php_ to
+test _Select_ on your system.  _Select_ requires PHP 5.3+.
