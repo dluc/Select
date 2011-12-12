@@ -113,17 +113,17 @@ Return a new object of the specified class.
 
 The class name must be passed without namespace
         
-## Select::get<Dependency name>()
+## Select::get&lt;Dependency name>()
     
 Get a defined dependency.  If the dependency is not defined throws and exception.
 If the dependency is explicitly defined as a multiton it always returns a new object.
         
-## Select::set<Dependency name>(object $object)
+## Select::set&lt;Dependency name>(object $object)
     
 Define and store the passed object as a new dependency.  Overwrite any existing
 dependency with the same name.  The dependency is considered to be a singleton.
         
-## Select::def<Dependency name>(string $class, array $contructorParameters, boolean $isSingleton)
+## Select::def&lt;Dependency name>(string $class, array $contructorParameters, boolean $isSingleton)
         
 Define a new dependency, without instantiating the object.  Overwrite any existing
 dependency with the same name.  Constructor parameters can be passed after the class name.
@@ -137,7 +137,7 @@ third parameter.
         Select::setMailer('Mailer', array('smtp.gmail.com', 465), false)
         
 
-# Select::ini<Dependency name>()
+## Select::ini&lt;Dependency name>()
 
 Define a new dependency, instantiating and returning the object.  Overwrite any existing
 dependency with the same name.  Constructor parameters can be passed after the class name.
@@ -149,8 +149,4 @@ third parameter.
         Select::iniMailer('Mailer')->setSender('root@localhost')
         Select::iniMailer('Mailer', array('smtp.gmail.com', 465))->setSender('root@localhost')
         Select::iniMailer('Mailer', array('smtp.gmail.com', 465), false)->setSender('root@localhost')
-        
-        
-        
-        
         
