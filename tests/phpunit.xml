@@ -1,0 +1,10 @@
+<phpunit
+	bootstrap="bootstrap.php"
+	colors="true"
+	backupGlobals="false">
+    <testsuites>
+        <testsuite name="lib">
+            <directory>./lib</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
