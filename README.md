@@ -1,15 +1,15 @@
 # Description
 
-**Select** is a static **Service Locator** implementation with PHP magic 
-methods. It allows to **replace classes** and can be used to **hold 
+**Select** is a static **Service Locator** implementation with PHP method 
+ovearloading. It allows to **replace classes** and can be used to **hold 
 components/services**, identified by unique names and automatically exposed
 with getter methods.
 
 _Select_ is designed to be subclassed with a custom class name, as opposed to 
 the common injection through constructors.  To replace _Select_ you subclass 
-the main class, implementing the same interface _iSelect_.  For instance: 
-during tests you can either use a different set of definitions (suggested) or
-use a mocked Service Locator class.
+the main class.  For instance: during tests you can either use a different set
+of definitions (suggested) or use a mocked Service Locator class implementing
+the same interface _iSelect_.
 
 _Service Locator_ is an _Inversion of Control_ pattern, an alternative to 
 _Constructor Injection_ and _Setter Injection_.  Each approach has pros and
@@ -48,7 +48,7 @@ _setUp_) with the custom class name, to verify that everything works properly.
 You might have to create a fixture, see _tests/fixtures/select\_*NS.php_.
 
 Notice that subclasses don't need to explicit any interface because _Select_
-uses magic methods to catch calls to the stored dependencies.  _iSelect_ should
+uses method overloading to catch calls to the stored dependencies.  _iSelect_ should
 be used when replacing _Select_ with a new or fake implementation.
 
 
