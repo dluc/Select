@@ -25,8 +25,8 @@ class Select_Test extends PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        App_Builder::reset();
-        App\Builder::reset();
+        $classes = $this->classUnderTest();
+        foreach ($classes as $class) $class[0]::reset();
     }
     
     /**

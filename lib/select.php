@@ -39,7 +39,7 @@ class Select_InvalidParameters_Exception extends Select_Exception { }
  *
  * How-to extend the class with a custom namespace:
  *
- *         class My_DI extends JeDI {
+ *         class My_DI extends Select {
  *             const DEFAULT_NAMESPACE = 'My_';
  *             static protected $_namespace = self::DEFAULT_NAMESPACE;
  *         }
